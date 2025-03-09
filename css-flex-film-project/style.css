@@ -1,0 +1,179 @@
+/*Temel Ayarlar*/
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Header*/
+header{
+    background-color: #ff6b6b; /*Menü arka plan rengi*/
+    color: white; /*Menü yazı rengi*/
+    padding: 1rem 0; /*Menü padding ayarları*/
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;  /*Sayfanın genişliği*/
+    margin: auto; /*max-width 1200px verildiğinde margin:auto ile sayfa kendini ortalar.*/
+    padding: 0 20px;
+}
+
+header nav ul{
+    list-style: none; /*Noktaları kaldırır.*/
+    display: flex; /*Menüyü yan yana getirir.*/
+    gap: 20px;  /*Menü elemanları arasında boşluk bırakır.*/
+}
+
+header nav ul li a { 
+    color: white; 
+    text-decoration: none; /* Varsayılan alt çizgiyi kaldırır */
+    font-weight: bold;
+    position: relative; /* Alt çizgiyi özel olarak eklemek için gerekli */
+    padding-bottom: 5px; /* Çizginin biraz daha aşağıda durmasını sağlar */
+    
+}
+
+header nav ul li a:hover::after { 
+    content: ""; /* Boş bir içerik ekleyerek pseudo-element oluşturur */
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 100%; /* Çizgiyi tüm genişlik boyunca yay */
+    height: 3px; /* Çizginin kalınlığını belirle */
+    background-color: white; /* Çizginin rengini beyaz yap */
+}
+
+header nav ul li a:hover {
+    color: #ffe600; /* Sarı renk efekti */
+}
+
+/*Main Başlangıç*/
+.hero{
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f3f3f3;
+}
+
+.movies{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.movies .movie{
+    max-width: 200px;
+    text-align: center;
+}
+
+.movies .movie img{
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movies .movie img:hover{
+    transform: scale(1.05);
+}
+/*Main Bitiş*/
+
+
+/*Footer Başlangıç*/
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+/*Footer Bitiş*/
+
+
+/*Hakkımızda Sayfası*/ 
+
+.about{
+    padding: 2rem;
+    max-width: 800px; /*Sayfanın genişliği*/
+    margin: auto; 
+    line-height: 1.6; /*Satır yüksekliği.Okunurluğu arttırır.*/
+}
+
+.about h2, .about h3{  /* virgüle dikkat et.  virgül "ve" anlamına gelir*/
+    color: #ff6b6b;
+}
+
+/*İletişim Sayfası*/
+
+.contact{
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/*Form ve İletişim Bilgileri*/  
+
+.contact-form{
+    display: flex;
+    flex-direction: column; /*Elemanları dikey eksende alt alta sıralar.*/
+    gap: 1rem; /*Elemanlar arasında boşluk bırakır.*/
+}
+
+.contact-form .form-group{
+    display: flex;
+    flex-direction: column; /*Elemanların formlarını uzatır*/
+}
+
+.contact-form label{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea{ /*input ve textarea stilleri*/
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*Buton Stilleri*/
+
+.contact-form button{
+    padding: 0.7rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none; /*Butonun kenarlarını kaldırır.*/
+    border-radius: 10px; /*Butonun kenarlarını yuvarlar.*/
+    cursor:pointer; /*Üzerine gelindiğinde el işareti çıkarır,tıklanabilir yapar*/
+    font-size: 1rem; /*Butonun yazı boyutunu ayarlar.*/
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover{
+    background-color: #ff5252;
+}
+
+.contact-info{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    
+}
+
+.contact-info h3{
+    margin-bottom: 1rem;
+    color: #333;
+}
